@@ -109,23 +109,38 @@ body {
 	display: flex;
 	justify-content: center;
 }
+#deptform-instruction-container {
 
-
+  display: flex;
+}
+/*test for git*/
 #user-form-flex-container {
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 50%;
+}
 
+#instruction-container {
+  height: 50%;
+  width: 50%;
+}
+#instruction-container p {
+  padding-top: 30px;
+  font-size: 18px;
 }
 
 /*Controls user information field width*/
 .container-user-info {
+
   width: 35%;
 }
 
 
 /*-----------------Presets----------------------*/
+
+
 
 #preset-title {
 
@@ -138,6 +153,16 @@ body {
   display: flex;
   justify-content: space-evenly;
   height: 450px;
+}
+
+/*dropdown item width*/
+.dropdown-item {
+  width: 10vw;
+}
+
+.dept-drop {
+  text-align: center;
+  width: 17vw;
 }
 
 .presets {
@@ -299,23 +324,23 @@ ul {
     width: 50%;
 }
 
-
-footer {
-  height: 60px;
+#footer-flex-container {
+  padding-top: 10px;
+  height: 7%;
   width: 100%;
   background: #FF8200;
-  padding-left: 500px;
-  padding-right: 500px;
-  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+
+}
+footer {
+  width: 50%;
 }
 footer p {
   color: white;
   font-size: 12px;
   text-align: center;
-
 }
-
-
 
 /*My solution for correcting a positioning issue when
 hiding/unhiding this element for Apple page toggle.*/
@@ -354,4 +379,24 @@ hiding/unhiding this element for Apple page toggle.*/
   #cssmenu ul li a:before {
     display: none;
   }
+}
+
+#dept-drop-bar {
+
+  width: 100%;
+}
+#dept-label {
+
+  width: 100%;
+  display: flex;
+
+}
+#department-dropdown {
+
+  display: flex;
+  vertical-align: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

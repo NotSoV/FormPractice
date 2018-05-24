@@ -5,13 +5,12 @@
   <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-  <script src="script.js"></script>
-
-
   <title>Device Purchase Form</title>
 </head>
 
@@ -29,7 +28,10 @@
 
   <!--- Forms ---->
   <!--- Form-user-info ---->
-
+<div>
+  <img src=""/>
+</div>
+<div id="deptform-instruction-container">
   <form id="user-form-flex-container">
     <h2><u>User / Departmental Information</u></h2>
     <div class="container-user-info">
@@ -51,9 +53,46 @@
         <input type="text" class="form-control" id="costcenternumber" placeholder="Enter cost center number">
       </div>
 
+      <div id="department-dropdown"class="dropdown">
+        <div id="dept-label">
+        <label>Department:</label>
+      </div>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dept-drop-bar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Select Department <i class="fa fa-chevron-down"></i>
+          </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <div class="dropdown-item dept-drop">Accounting Information Management</div>
+          <div class="dropdown-item dept-drop">Business Analytics & Statistics</div>
+          <div class="dropdown-item dept-drop">Financial Information Office</div>
+          <div class="dropdown-item dept-drop">Economics</div>
+          <div class="dropdown-item dept-drop">Management & Human Resources</div>
+          <div class="dropdown-item dept-drop">Marketing & Supply Chain</div>
+
+<!--test for git-->
+        </div>
+      </div>
+
     </div>
     <hr>
+
   </form>
+  <div id="instruction-container">
+    <h1> <u>Instructions</u></h1>
+    <p>Lorem ipsum dolor sit amet, duo et natum quaestio reformidans,
+      sit nostro ancillae legendos te, cibo idque facilisi ea eos. Cu mel purto erant dissentiunt,
+     ei eam novum vocent consulatu, no qui laudem utroque tractatos. Et nec agam quot forensibus.
+     Solet inciderint ut vel. Id has quot iisque impedit, te has simul salutatus, pro et tollit nostrud.
+
+
+    <p>Congue accusata petentium ne nam.
+       No his hinc habeo definitiones, ei cetero bonorum persecuti his.
+       Sea idque nemore ne, ne nonumy explicari sed, id dico dolorem eum.
+       In eruditi neglegentur sit.</p>
+
+
+  </div>
+</div>
+
   <hr>
 
   <!---Preset builds---------->
@@ -661,19 +700,22 @@
     <label></label>
     <button id="submit" type="button" class="btn btn-primary">SUBMIT</button>
   </form>
-
 </body>
 
+<div id="footer-flex-container">
 <footer>
   <p>
     Lorem ipsum dolor sit amet, duo at dictas delicata. Te noster feugiat rationibus sea, rebum fugit eos no, integre numquam in pri. Vero delenit nonumes ut mel, te autem augue pri. Duo eu ponderum iracundia definitiones, nam nostrum intellegebat in. Veritus
     delectus laboramus ius ex.
   </p>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+
 </footer>
+</div>
 
 
 

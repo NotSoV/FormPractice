@@ -9,70 +9,22 @@ $(document).ready(function() {
 Need JS for pulling radio button options and comments into email.
 */
 
-/*Remember selection made in drop down menu
-without this, the drop down menus keep their original values*/
-$(".os-drop").click(function() {
-  $("#os-drop-bar").text($(this).text());
-
-});
-
-$(".ram-drop").click(function() {
-  $("#ram-drop-bar").text($(this).text());
-});
-
-$(".cpu-drop").click(function() {
-  $("#cpu-drop-bar").text($(this).text());
-});
-
-$(".storage-drop").click(function() {
-  $("#storage-drop-bar").text($(this).text());
-});
-
-
-$(".drive-drop").click(function() {
-  $("#drive-drop-bar").text($(this).text());
-});
-
-
-
-$(".adobeCC-drop").click(function() {
-  $("#adobeCC-drop-bar").text($(this).text());
-
-});
-
-$(".stata-drop").click(function() {
-  $("#stata-drop-bar").text($(this).text());
-});
-
-$(".vm-drop").click(function() {
-  $("#vm-drop-bar").text($(this).text());
-});
-
-$(".amos-drop").click(function() {
-  $("#amos-drop-bar").text($(this).text());
-});
-
-
-$(".other-drop").click(function() {
-  $("#other-drop-bar").text($(this).text());
-});
-
-
-
 
 
 //Transfer form to email
 $("#submit").click(function() {
 
-
-
   //NOT WORKING!
     var preset = "";
-    if($('#Dell5050SFF').is(':checked')) {
-      console.log("preset!"); };
+    if($('#radio-dell-1').is(':checked')){
+      preset = "Dell 5050 SFF Desktop"
+    };
+//test for git
 
+    $("input").each(function(){
 
-
+    })
+console.log(preset);
 
 
   /*user field data*/
@@ -109,12 +61,9 @@ $("#submit").click(function() {
                 //software customization and comments
                "%0A%0A---SOFTWARE---"+"%0AAdobe CC: " +adobecc+"%0AStata: " +stata+"%0AVM App: " +vm +"%0ASPSS AMOS: " +amos+"%0AMisc: " +other+ "%0A%0AUser Comments: "+comments;
 
-
-
   window.location.href =
       "mailto:EMAIL@EMAIL.COM?subject=Order%20Submission&body=" + final;
 });
-
 
 
 
@@ -141,9 +90,8 @@ $("#apple-btn").click(function() {
         This also causes a positioning bug. Check on it.*/
         os.style.display ="none";
         osdrop.style.display = "none";
-
         //instant show
-        //apple.style.display = "block";
+        //apple.style.display = "block/flex";
 });
 
 $("#dell-btn").click(function() {
@@ -156,7 +104,6 @@ $("#dell-btn").click(function() {
         Consider doing some for tablets or changing options?*/
         os.style.display ="flex";
         osdrop.style.display = "flex";
-
 });
 
 $("#lenovo-btn").click(function() {
@@ -169,8 +116,6 @@ $("#lenovo-btn").click(function() {
         Consider doing some for tablets or changing options?*/
         os.style.display ="flex";
         osdrop.style.display = "flex";
-
-
 });
 
 $("#tablets-btn").click(function() {
@@ -179,13 +124,62 @@ $("#tablets-btn").click(function() {
         apple.style.display = "none";
         lenovo.style.display = "none";
         $("#tablets-form-flex-container").fadeIn(350);
-
         /*removal of OS option for Mac devices.
         Consider doing some for tablets or changing options?*/
         os.style.display ="flex";
         osdrop.style.display = "flex";
+});
 
 
+/*Remember selection made in drop down menu
+without this, the drop down menus keep their original values*/
+$(".os-drop").click(function() {
+  $("#os-drop-bar").text($(this).text());
+
+});
+
+$(".ram-drop").click(function() {
+  $("#ram-drop-bar").text($(this).text());
+});
+
+$(".cpu-drop").click(function() {
+  $("#cpu-drop-bar").text($(this).text());
+});
+
+$(".storage-drop").click(function() {
+  $("#storage-drop-bar").text($(this).text());
+});
+
+
+$(".drive-drop").click(function() {
+  $("#drive-drop-bar").text($(this).text());
+});
+
+
+$(".adobeCC-drop").click(function() {
+  $("#adobeCC-drop-bar").text($(this).text());
+
+});
+
+$(".stata-drop").click(function() {
+  $("#stata-drop-bar").text($(this).text());
+});
+
+$(".vm-drop").click(function() {
+  $("#vm-drop-bar").text($(this).text());
+});
+
+$(".amos-drop").click(function() {
+  $("#amos-drop-bar").text($(this).text());
+});
+
+
+$(".other-drop").click(function() {
+  $("#other-drop-bar").text($(this).text());
+});
+
+$(".dept-drop").click(function() {
+  $("#dept-drop-bar").text($(this).text());
 });
 
 
