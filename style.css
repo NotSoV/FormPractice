@@ -5,6 +5,7 @@
   justify-content: center;
   background: #FF8200;
   width: auto;
+
 }
 #cssmenu ul {
   list-style: none;
@@ -94,10 +95,18 @@
 
 /*==================NAV BAR END=====================*/
 
+#logo-container {
 
+display: flex;
+justify-content: center;
+padding: 10px;
+}
 
 
 body {
+
+
+
   background: #F8F8F8;
   height: 100%;
 }
@@ -110,7 +119,7 @@ body {
 	justify-content: center;
 }
 #deptform-instruction-container {
-
+padding-top: 30px;
   display: flex;
 }
 /*test for git*/
