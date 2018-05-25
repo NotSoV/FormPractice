@@ -1,4 +1,24 @@
-<!--<!doctype html>--->
+<!DOCTYPE html>
+
+<!--
+TO DO:
+  1)Documentation could be improved
+  2)Naming conventions could be more consistent
+  3)Potentially unneeded CSS (Forgetting to delete corresponding css when deleting elements)
+  4)Finish javascript side to store selected radio button choices
+      a)Fix naming convention for radio button ID's to be more specific to the product
+  5)Move current "navbar" to middle of page above preset builds. It would make more sense/follow
+      and a premade UT header can go in its place.
+  6)I've been using flexbox and Floats/Inline/Block interchangably to learn both while creating this.
+      Should I go back and do all of it in flexbox>
+  7)No need for mobile responsiveness, right? Maybe check tablets at the least?
+  8)Fonts/Half borders/Positioning. What could be improved to look nicer?
+
+
+
+
+-->
+
 <html lang=''>
 
 <head>
@@ -18,13 +38,13 @@
 </div>
 <body>
 
-  <nav id='cssmenu'>
+  <nav id='navmenu'>
     <ul>
-      <li id="dell-btn"><a href='#'><span>Dell</span></a></li>
-      <li id="apple-btn"><a href='#'><span>Apple</span></a></li>
-      <li id="lenovo-btn"><a href='#'><span>Lenovo</span></a></li>
-      <li id="tablets-btn"><a href='#'><span>Tablets</span></a></li>
-      <li id="gethelp" class='last'><a href='#'><span>Get Help</span></a></li>
+      <li id="dell-btn"><a href='#' onClick="return false;"><span>Dell</span></a></li>
+      <li id="apple-btn"><a href='#' onClick="return false;"><span>Apple</span></a></li>
+      <li id="lenovo-btn"><a href='#' onClick="return false;"><span>Lenovo</span></a></li>
+      <li id="tablets-btn"><a href='#' onClick="return false;"><span>Tablets</span></a></li>
+      <li id="gethelp" class='last'><a href='#' onClick="return false;"><span>Get Help</span></a></li>
     </ul>
   </nav>
 
@@ -83,16 +103,27 @@
   </form>
   <div id="instruction-container">
     <h1> <u>Instructions</u></h1>
-    <p>Lorem ipsum dolor sit amet, duo et natum quaestio reformidans,
-      sit nostro ancillae legendos te, cibo idque facilisi ea eos. Cu mel purto erant dissentiunt,
-     ei eam novum vocent consulatu, no qui laudem utroque tractatos. Et nec agam quot forensibus.
-     Solet inciderint ut vel. Id has quot iisque impedit, te has simul salutatus, pro et tollit nostrud.
+    <p>Welcome to TIS's CUP and Equiment order form. Please follow the instructions below:
+
+      <ol>
+        <li>Fill out your user and departmental information to the left.</li>
+        <li>Choose between Dell, Apple, Levnovo, or tablets from the top.</li>
+        <li>Select your preconfigured builds below.</li>
+        <li>If there is a component that you wanted to change within your
+          preconfigured build, then plesae make the appropriate selections
+          under "Preset Customizations".</li>
+          <li>If you will need any software purchased with your new computer setup
+          make the appropriate selections under "Additional Software".</li>
+          <li>If there is an option missing, or if you have any special instructions
+          that you would like applied to your setup, please add those comments in the field below.</li>
+          <li>Final, click submit, and this will create an email with all your selections. Please review, then send.</li>
 
 
-    <p>Congue accusata petentium ne nam.
-       No his hinc habeo definitiones, ei cetero bonorum persecuti his.
-       Sea idque nemore ne, ne nonumy explicari sed, id dico dolorem eum.
-       In eruditi neglegentur sit.</p>
+
+</ol>
+
+    <p>Someone will review your order request, answer your questions, and reply with a confirmation
+    for order if everything looks correct.</p>
 
 
   </div>
@@ -175,7 +206,7 @@
       <div id="preset4" class="presets">
 
         <div class="radio text-center">
-          <label><input type="radio" name="optradio"></label>
+          <label><input type="radio" name="optradio" id="radio-dell-4"></label>
         </div>
 
         <img class="center preset-imgs" src="https://images-eu.ssl-images-amazon.com/images/I/41D7S53e%2BPL._SL500_AC_SS350_.jpg" />
@@ -196,7 +227,7 @@
       <div id="preset5" class="presets">
 
         <div class="radio text-center">
-          <label><input type="radio" name="optradio"></label>
+          <label><input type="radio" name="optradio" id="radio-dell-5"></label>
         </div>
 
         <img class="center preset-imgs" src="https://images-eu.ssl-images-amazon.com/images/I/41D7S53e%2BPL._SL500_AC_SS350_.jpg" />
@@ -232,7 +263,7 @@
 
         <!----radio- leave label element as a cheap way to fix spacing--->
         <div class="radio text-center">
-          <label><input type="radio" name="optradio"></label>
+          <label><input type="radio" name="optradio" id="radio-apple-1"></label>
         </div>
 
         <!---Customize these images later--->

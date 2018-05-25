@@ -5,27 +5,26 @@ $(document).ready(function() {
   });
 });
 
-/*
-Need JS for pulling radio button options and comments into email.
+
+/*Transfer form to email
+I'd like to see pushing this to a mail server via php
+or some other method so that a submit is the last thing
+the user does.
 */
 
-
-
-//Transfer form to email
 $("#submit").click(function() {
 
-  //NOT WORKING!
-    var preset = "";
-    if($('#radio-dell-1').is(':checked')){
-      preset = "Dell 5050 SFF Desktop"
-    };
-//test for git
-
-    $("input").each(function(){
-
-    })
-console.log(preset);
-
+/*If (element value is checked){pull ID}
+This should only apply true to radio buttons.
+Maybe make these radio button ID tailored to what the item is?
+That should lessen the code required to provide an accurate selection to submit.*/
+    $( "input" ).each( function(index, el) {
+        var elem = $(el);
+        if(elem.is(":checked")){
+        console.log(this.id);
+        //target/store the div title below?
+        }
+      });
 
   /*user field data*/
   var name = document.getElementById("username").value;
@@ -51,18 +50,18 @@ console.log(preset);
   var comments = document.getElementById("textarea-comments").value
 
 
-
   var final =
       //User info fields
       "Name: " +name+ "%0ANetid: " +netid+ "%0APhone: " +phone+ "%0ACost Center: "+costcenter+
                //device customization field
                "%0A%0A---Device Customizations---"+"%0ACPU: " +cpu+ "%0AOS: " +os+ "%0ARAM: " +ram+ "%0AStorage: "+storage+ "%0ADrive: " +drive+
-
                 //software customization and comments
-               "%0A%0A---SOFTWARE---"+"%0AAdobe CC: " +adobecc+"%0AStata: " +stata+"%0AVM App: " +vm +"%0ASPSS AMOS: " +amos+"%0AMisc: " +other+ "%0A%0AUser Comments: "+comments;
+               "%0A%0A---SOFTWARE---"+"%0AAdobe CC: " +adobecc+"%0AStata: " +stata+"%0AVM App: " +vm +
+               "%0ASPSS AMOS: " +amos+"%0AMisc: " +other+ "%0A%0AUser Comments: "+comments;
 
+  /*Turning off for testing
   window.location.href =
-      "mailto:EMAIL@EMAIL.COM?subject=Order%20Submission&body=" + final;
+      "mailto:EMAIL@EMAIL.COM?subject=Order%20Submission&body=" + final;*/
 });
 
 
@@ -100,8 +99,6 @@ $("#dell-btn").click(function() {
         lenovo.style.display = "none";
         tablets.style.display = "none";
 
-        /*removal of OS option for Mac devices.
-        Consider doing some for tablets or changing options?*/
         os.style.display ="flex";
         osdrop.style.display = "flex";
 });
@@ -112,8 +109,6 @@ $("#lenovo-btn").click(function() {
         $("#lenovo-form-flex-container").fadeIn(350);
         tablets.style.display = "none";
 
-        /*removal of OS option for Mac devices.
-        Consider doing some for tablets or changing options?*/
         os.style.display ="flex";
         osdrop.style.display = "flex";
 });
@@ -124,10 +119,9 @@ $("#tablets-btn").click(function() {
         apple.style.display = "none";
         lenovo.style.display = "none";
         $("#tablets-form-flex-container").fadeIn(350);
-        /*removal of OS option for Mac devices.
-        Consider doing some for tablets or changing options?*/
-        os.style.display ="flex";
-        osdrop.style.display = "flex";
+
+        os.style.display ="none";
+        osdrop.style.display = "none";
 });
 
 
