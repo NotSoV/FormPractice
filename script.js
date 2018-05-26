@@ -18,10 +18,12 @@ $("#submit").click(function() {
 This should only apply true to radio buttons.
 Maybe make these radio button ID tailored to what the item is?
 That should lessen the code required to provide an accurate selection to submit.*/
+
+var device = ""
     $( "input" ).each( function(index, el) {
         var elem = $(el);
         if(elem.is(":checked")){
-        console.log(this.id);
+          device = (this.id);
         //target/store the div title below?
         }
       });
@@ -31,6 +33,7 @@ That should lessen the code required to provide an accurate selection to submit.
   var netid = document.getElementById("usernetid").value;
   var phone = document.getElementById("userphone").value;
   var costcenter = document.getElementById("costcenternumber").value;
+  var department = $("#dept-drop-bar").text();
 
   /*Device Customizations*/
   var cpu =  $("#cpu-drop-bar").text();
@@ -44,7 +47,7 @@ That should lessen the code required to provide an accurate selection to submit.
   var stata = $("#stata-drop-bar").text();
   var vm =  $("#vm-drop-bar").text();
   var amos = $("#amos-drop-bar").text();
-  var other =  $("#other-drop-bar").text();
+  var other =  document.getElementById("misc-field").value;
 
   /*Comments field*/
   var comments = document.getElementById("textarea-comments").value
@@ -52,16 +55,16 @@ That should lessen the code required to provide an accurate selection to submit.
 
   var final =
       //User info fields
-      "Name: " +name+ "%0ANetid: " +netid+ "%0APhone: " +phone+ "%0ACost Center: "+costcenter+
+      "Name: " +name+ "%0ANetid: " +netid+ "%0APhone: " +phone+ "%0ACost Center: "+costcenter+ "%0ADepartment: " +department+
                //device customization field
-               "%0A%0A---Device Customizations---"+"%0ACPU: " +cpu+ "%0AOS: " +os+ "%0ARAM: " +ram+ "%0AStorage: "+storage+ "%0ADrive: " +drive+
+               "%0A%0A---Device and Customizations---"+"%0ADevice: "+device+"%0ACPU: " +cpu+ "%0AOS: " +os+ "%0ARAM: " +ram+ "%0AStorage: "+storage+ "%0ADrive: " +drive+
                 //software customization and comments
                "%0A%0A---SOFTWARE---"+"%0AAdobe CC: " +adobecc+"%0AStata: " +stata+"%0AVM App: " +vm +
                "%0ASPSS AMOS: " +amos+"%0AMisc: " +other+ "%0A%0AUser Comments: "+comments;
 
-  /*Turning off for testing
+
   window.location.href =
-      "mailto:EMAIL@EMAIL.COM?subject=Order%20Submission&body=" + final;*/
+      "mailto:EMAIL@EMAIL.COM?subject=Order%20Submission&body=" + final;
 });
 
 
@@ -95,6 +98,7 @@ $("#apple-btn").click(function() {
 
 $("#dell-btn").click(function() {
         $("#dell-form-flex-container").fadeIn(350);
+
         apple.style.display = "none";
         lenovo.style.display = "none";
         tablets.style.display = "none";
@@ -126,7 +130,10 @@ $("#tablets-btn").click(function() {
 
 
 /*Remember selection made in drop down menu
-without this, the drop down menus keep their original values*/
+without this, the drop down menus keep their original values
+Look into looping this.
+
+*/
 $(".os-drop").click(function() {
   $("#os-drop-bar").text($(this).text());
 
@@ -152,7 +159,6 @@ $(".drive-drop").click(function() {
 
 $(".adobeCC-drop").click(function() {
   $("#adobeCC-drop-bar").text($(this).text());
-
 });
 
 $(".stata-drop").click(function() {

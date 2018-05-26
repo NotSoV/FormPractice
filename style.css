@@ -15,7 +15,7 @@
   display: block;
 
 }
-/*
+
 #navmenu ul:after {
   content: " ";
   display: block;
@@ -23,7 +23,7 @@
   height: 0;
   clear: both;
   visibility: hidden;
-}*/
+}
 #navmenu ul li {
   display: inline-block;
   padding: 0;
