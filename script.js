@@ -1,5 +1,8 @@
 $(document).ready(function() {
-  $("#gethelp").on("click", function() {
+
+  /*Open email client with help instructions.
+  Eventually a webform will be more ideal.*/
+$("#gethelp").on("click", function() {
     window.location.href =
       "mailto:EMAIL@EMAIL.COM?subject=I%20Need%20Assistance%20With%20Online%20Ordering&body=Please%20tell%20us%20how%20we%20can%20help.";
   });
@@ -9,58 +12,55 @@ $(document).ready(function() {
 /*Transfer form to email
 I'd like to see pushing this to a mail server via php
 or some other method so that a submit is the last thing
-the user does.
-*/
-
+the user does.*/
 $("#submit").click(function() {
 
 /*If (element value is checked){pull ID}
-This should only apply true to radio buttons.
+This should only apply true to the radio buttons on my form.
 Maybe make these radio button ID tailored to what the item is?
 That should lessen the code required to provide an accurate selection to submit.*/
-
 var device = ""
-    $( "input" ).each( function(index, el) {
-        var elem = $(el);
-        if(elem.is(":checked")){
-          device = (this.id);
+$( "input" ).each( function(index, el) {
+    var elem = $(el);
+    if(elem.is(":checked")){
+      device = (this.id);
         //target/store the div title below?
-        }
-      });
+      }
+  });
 
-  /*user field data*/
-  var name = document.getElementById("username").value;
-  var netid = document.getElementById("usernetid").value;
-  var phone = document.getElementById("userphone").value;
-  var costcenter = document.getElementById("costcenternumber").value;
-  var department = $("#dept-drop-bar").text();
+/*user field data*/
+var name = document.getElementById("username").value;
+var netid = document.getElementById("usernetid").value;
+var phone = document.getElementById("userphone").value;
+var costcenter = document.getElementById("costcenternumber").value;
+var department = $("#dept-drop-bar").text();
 
-  /*Device Customizations*/
-  var cpu =  $("#cpu-drop-bar").text();
-  var os = $("#os-drop-bar").text();
-  var ram =  $("#ram-drop-bar").text();
-  var storage = $("#storage-drop-bar").text();
-  var drive =  $("#drive-drop-bar").text();
+/*Device Customizations*/
+var cpu =  $("#cpu-drop-bar").text();
+var os = $("#os-drop-bar").text();
+var ram =  $("#ram-drop-bar").text();
+var storage = $("#storage-drop-bar").text();
+var drive =  $("#drive-drop-bar").text();
 
-  /*Device Customizations*/
-  var adobecc =  $("#adobeCC-drop-bar").text();
-  var stata = $("#stata-drop-bar").text();
-  var vm =  $("#vm-drop-bar").text();
-  var amos = $("#amos-drop-bar").text();
-  var other =  document.getElementById("misc-field").value;
+/*Device Customizations*/
+var adobecc =  $("#adobeCC-drop-bar").text();
+var stata = $("#stata-drop-bar").text();
+var vm =  $("#vm-drop-bar").text();
+var other =  document.getElementById("misc-field").value;
 
   /*Comments field*/
-  var comments = document.getElementById("textarea-comments").value
+var comments = document.getElementById("textarea-comments").value
 
 
-  var final =
-      //User info fields
-      "Name: " +name+ "%0ANetid: " +netid+ "%0APhone: " +phone+ "%0ACost Center: "+costcenter+ "%0ADepartment: " +department+
-               //device customization field
-               "%0A%0A---Device and Customizations---"+"%0ADevice: "+device+"%0ACPU: " +cpu+ "%0AOS: " +os+ "%0ARAM: " +ram+ "%0AStorage: "+storage+ "%0ADrive: " +drive+
-                //software customization and comments
-               "%0A%0A---SOFTWARE---"+"%0AAdobe CC: " +adobecc+"%0AStata: " +stata+"%0AVM App: " +vm +
-               "%0ASPSS AMOS: " +amos+"%0AMisc: " +other+ "%0A%0AUser Comments: "+comments;
+var final =
+    //User info fields
+    "Name: " +name+ "%0ANetid: " +netid+ "%0APhone: " +phone+ "%0ACost Center: "+costcenter+ "%0ADepartment: " +department+
+    //device customization field
+    "%0A%0A---Device and Customizations---"+"%0ADevice: "+device+"%0ACPU: " +cpu+ "%0AOS: " +os+ "%0ARAM: " +ram+ "%0AStorage: "+storage+
+    //software customization
+    "%0A%0A---SOFTWARE---"+"%0AAdobe CC: " +adobecc+"%0AStata: " +stata+"%0AVM App: " +vm+ "%0AMisc: " +other+
+    //comments area
+    "%0A%0AUser Comments: "+comments;
 
 
   window.location.href =
@@ -131,9 +131,8 @@ $("#tablets-btn").click(function() {
 
 /*Remember selection made in drop down menu
 without this, the drop down menus keep their original values
-Look into looping this.
 
-*/
+Look into looping this.*/
 $(".os-drop").click(function() {
   $("#os-drop-bar").text($(this).text());
 
@@ -152,9 +151,7 @@ $(".storage-drop").click(function() {
 });
 
 
-$(".drive-drop").click(function() {
-  $("#drive-drop-bar").text($(this).text());
-});
+
 
 
 $(".adobeCC-drop").click(function() {
@@ -169,10 +166,6 @@ $(".vm-drop").click(function() {
   $("#vm-drop-bar").text($(this).text());
 });
 
-$(".amos-drop").click(function() {
-  $("#amos-drop-bar").text($(this).text());
-});
-
 
 $(".other-drop").click(function() {
   $("#other-drop-bar").text($(this).text());
@@ -181,7 +174,3 @@ $(".other-drop").click(function() {
 $(".dept-drop").click(function() {
   $("#dept-drop-bar").text($(this).text());
 });
-
-
-
-//Radio button checked

@@ -5,12 +5,8 @@ TO DO:
   1)Documentation could be improved
   2)Naming conventions could be more consistent
   3)Potentially unneeded CSS (Forgetting to delete corresponding css when deleting elements)
-  4)Finish javascript side to store selected radio button choices
-      a)Fix naming convention for radio button ID's to be more specific to the product
-  5)Move current "navbar" to middle of page above preset builds. It would make more sense/follow
-      and a premade UT header can go in its place.
   6)I've been using flexbox and Floats/Inline/Block interchangably to learn both while creating this.
-      Should I go back and do all of it in flexbox>
+      Should I go back and do all of it in flexbox?
   7)No need for mobile responsiveness, right? Maybe check tablets at the least?
   8)Fonts/Half borders/Positioning. What could be improved to look nicer?
 
@@ -93,7 +89,6 @@ TO DO:
   <div id="instruction-container">
     <h1> <u>Instructions</u></h1>
     <p>Welcome to TIS's CUP and Equiment order form. Please follow the instructions below:
-
       <ol>
         <li>Fill out your user and departmental information to the left.</li>
         <li>Choose between Dell, Apple, Levnovo, or tablets from the top.</li>
@@ -106,24 +101,14 @@ TO DO:
           <li>If there is an option missing, or if you have any special instructions
           that you would like applied to your setup, please add those comments in the field below.</li>
           <li>Final, click submit, and this will create an email with all your selections. Please review, then send.</li>
-
-
-
-</ol>
-
+        </ol>
     <p>Someone will review your order request, answer your questions, and reply with a confirmation
-    for order if everything looks correct.</p>
-
-
   </div>
 </div>
 
 
-
-
-
-
-  <nav id='navmenu'>
+<!-- Swap between brands -->
+  <nav id='brandmenu'>
     <ul>
       <li id="dell-btn"><a href='#' onClick="return false;"><span>Dell</span></a></li>
       <li id="apple-btn"><a href='#' onClick="return false;"><span>Apple</span></a></li>
@@ -133,7 +118,7 @@ TO DO:
     </ul>
   </nav>
 
-  <hr>
+
 
   <!---Preset builds---------->
   <h2 id="preset-title"><u>Pre-configured Builds</u></h2>
@@ -152,8 +137,8 @@ TO DO:
         </div>
 
         <!---Customize these images later--->
-        <img class="center preset-imgs" src="http://www.budgetpc.com.au/media/catalog/product/cache/1/thumbnail/258x245/9df78eab33525d08d6e5fb8d27136e95/r/f/rfb-dell-t1700_0.png" />
-        <div class="preset-title">Dell 5050 SFF Desktop</div>
+        <img class="center preset-imgs" src="media/dell-5050-sff-template.jpg" />
+        <div class="preset-title">Dell 5050 SFF Desktop ($1,217.37)</div>
 
         <!----Description of device.--->
         <ul id="preset-list">
@@ -172,11 +157,11 @@ TO DO:
           <label><input type="radio" name="optradio" id="Dell-5050-MT"></label>
         </div>
         <img class="center preset-imgs" src="http://www.budgetpc.com.au/media/catalog/product/cache/1/thumbnail/258x245/9df78eab33525d08d6e5fb8d27136e95/r/f/rfb-dell-t1700_0.png" />
-        <div class="preset-title">Dell 5050 MT Desktop</div>
+        <div class="preset-title">Dell 5050 MT Desktop ($1,223.37)</div>
 
         <!----Description of device.--->
         <ul id="preset-list">
-          <li>Intel Core i5-7700 (QC/8MB/8T/3.6GHz/65W)</li>
+          <li>Intel Core i7-7700 (QC/8MB/8T/3.6GHz/65W)</li>
           <li></li>
           <li>Win 10 Pro 64 English, French, Spanish</li>
           <li>16GB (2x8GB) DDR4 Memory</li>
@@ -193,7 +178,7 @@ TO DO:
         </div>
 
         <img class="center preset-imgs" src="http://www.budgetpc.com.au/media/catalog/product/cache/1/thumbnail/258x245/9df78eab33525d08d6e5fb8d27136e95/r/f/rfb-dell-t1700_0.png" />
-        <div class="preset-title">Dell 7450 AIO Desktop </div>
+        <div class="preset-title">Dell 7450 AIO Desktop ($1,185.00)</div>
 
         <!----Description of device.--->
         <ul id="preset-list">
@@ -214,16 +199,15 @@ TO DO:
         </div>
 
         <img class="center preset-imgs" src="https://images-eu.ssl-images-amazon.com/images/I/41D7S53e%2BPL._SL500_AC_SS350_.jpg" />
-        <div class="preset-title">Dell 5580 Standard Laptop </div>
+        <div class="preset-title">Dell 5580 Standard Laptop ($1,550.00)</div>
 
         <!----Description of device.--->
         <ul id="preset-list">
-          <li>Intel Core i5-7700 (QC/8MB/8T/3.6GHz/65W)</li>
-          <li></li>
+          <li> Intel Core i7-7820HQ (Quad Core, 2.90Gz, 8MB cache)</li>
           <li>Win 10 Pro 64 English, French, Spanish</li>
           <li>16GB (2x8GB) DDR4 Memory</li>
-          <li>2.5 inch 512GB SATA Class 20 Solid State Drive</li>
-          <li>Intel Integrated Graphics, Dell OptiPlex</li>
+          <li>512GB Solid State Drive M2 2280 SATA</li>
+          <li> i7-7820HQ Processor Base, NVIDA(R) GeForce 940MX Discrete Graphics </li>
           <li>DVD+/-RW Bezel</li>
         </ul>
 
@@ -235,16 +219,15 @@ TO DO:
         </div>
 
         <img class="center preset-imgs" src="https://images-eu.ssl-images-amazon.com/images/I/41D7S53e%2BPL._SL500_AC_SS350_.jpg" />
-        <div class="preset-title">Dell 7480 Lightweight Laptop</div>
+        <div class="preset-title">Dell 7480 Lightweight Laptop ($1,589.00)</div>
 
         <!----Description of device.--->
         <ul id="preset-list">
-          <li>Intel Core i7-7700 (QC/8MB/8T/3.6GHz/65W)</li>
-          <li></li>
+          <li> Intel Core i7-7600U (Dual Core, 2.80Gz, 4MB cache)</li>
           <li>Win 10 Pro 64 English, French, Spanish</li>
           <li>16GB (2x8GB) DDR4 Memory</li>
-          <li>2.5 inch 512GB SATA Class 20 Solid State Drive</li>
-          <li>Intel Integrated Graphics, Dell OptiPlex</li>
+          <li>512GB Solid State Drive M2 2280 SATA</li>
+          <li>Intel HD Graphics 620 </li>
 
         </ul>
 
@@ -271,97 +254,78 @@ TO DO:
         </div>
 
         <!---Customize these images later--->
-        <img class="center preset-imgs" src="https://png.pngtree.com/element_origin_min_pic/17/08/30/fc9fb142dd3b416591408f8389c68860.jpg" />
-        <div class="preset-title">Apple iMac 24" </div>
+        <img class="center preset-imgs" src="media/imac-template.jpg" />
+        <div class="preset-title">Apple iMac 21.5" ($1,698) </div>
 
         <!----Description of device.--->
         <ul id="preset-list">
-          <li>Intel Core i5-7700 (QC/8MB/8T/3.6GHz/65W)</li>
-          <li></li>
-
-          <li>8GB (2x8GB) DDR4 Memory</li>
-          <li>2.5 inch 512GB SATA SSD</li>
-          <li>Intel Integrated Graphics, Dell OptiPlex</li>
+          <li>3.0GHz quad-core Intel Core i5, Turbo Boost up to 3.5GHz</li>
+          <li>Apple Magic Keyboard with numeric keypad</li>
+          <li>16GB 2400MHz DDR4 Memory</li>
+          <li>1TB Fusion Drive</li>
+          <li>Radeon Pro 555 with 2GB video memory</li>
           <li>DVD+/-RW Bezel</li>
+          <li>5 Year Safeware $210.00 warranty</li>
         </ul>
       </div>
 
       <div id="preset2" class="presets">
         <div class="radio text-center">
-          <label><input type="radio" name="optradio" id="Apple-22in-iMac"></label>
+          <label><input type="radio" name="optradio" id="Apple-24in-iMac"></label>
         </div>
-        <img class="center preset-imgs" src="https://png.pngtree.com/element_origin_min_pic/17/08/30/fc9fb142dd3b416591408f8389c68860.jpg" />
-        <div class="preset-title">Apple iMac 22" </div>
+        <img class="center preset-imgs" src="media/imac-template.jpg" />
+        <div class="preset-title">Apple iMac 27" ($1,999.00) </div>
 
         <!----Description of device.--->
         <ul id="preset-list">
-          <li>Intel Core i7-7700 (QC/8MB/8T/3.6GHz/65W)</li>
-          <li></li>
-
-          <li>16GB (2x8GB) DDR4 Memory</li>
-          <li>2.5 inch 512GB SATA Class 20 Solid State Drive</li>
-          <li>Intel Integrated Graphics, Dell OptiPlex</li>
-
-        </ul>
-
-      </div>
-      <div id="preset3" class="presets">
-
-        <div class="radio text-center">
-          <label><input type="radio" name="optradio" id="Apple-27in-iMac"></label>
-        </div>
-
-        <img class="center preset-imgs" src="https://png.pngtree.com/element_origin_min_pic/17/08/30/fc9fb142dd3b416591408f8389c68860.jpg" />
-        <div class="preset-title">Apple iMac 27" </div>
-
-        <!----Description of device.--->
-        <ul id="preset-list">
-          <li>Intel Core i7-7700 (QC/8MB/8T/3.6GHz/65W)</li>
-          <li></li>
-
-          <li>8GB (2x8GB) DDR4 Memory</li>
-          <li>2.5 inch 512GB SATA Class 20 Solid State Drive</li>
-          <li>Intel Integrated Graphics, Dell OptiPlex</li>
+          <li>3.5GHz quad-core Intel Core i5, Turbo Boost up to 4.1GHz</li>
+          <li>Apple Magic Keyboard with numeric keypad</li>
+          <li>8GB 2400MHz DDR4 Memory</li>
+          <li>1TB Fusion Drive</li>
+          <li>Radeon Pro 575 with 4GB video memory</li>
           <li>DVD+/-RW Bezel</li>
+          <li>5 Year Safeware $350.00 warranty</li>
         </ul>
 
       </div>
-      <div id="preset4" class="presets">
+
+      <div id="preset3" class="presets">
 
         <div class="radio text-center">
           <label><input type="radio" name="optradio" id="Apple-Macbook-Pro"></label>
         </div>
 
-        <img class="center preset-imgs" src="https://cdn4.iconfinder.com/data/icons/MacBook_Pro/512/leopard.png" />
-        <div class="preset-title">Apple Macbook Pro laptop </div>
+        <img class="center preset-imgs" src="media/macbook-template.png" />
+        <div class="preset-title">Apple Macbook Pro 15" laptop ($2,645)</div>
 
         <!----Description of device.--->
         <ul id="preset-list">
-          <li>Intel Core i7-7700 (QC/8MB/8T/3.6GHz/65W)</li>
-          <li></li>
 
-          <li>16GB (2x8GB) DDR4 Memory</li>
-          <li>2.5 inch 512GB SATA Class 20 Solid State Drive</li>
-          <li>Intel Integrated Graphics, Dell OptiPlex</li>
-
+          <li>2.8GHz Quad-core Intel Core i7, Turbo Boost up to 3.8GHz</li>
+          <li>16GB 2133MHz LPDDR3 Memory</li>
+          <li>256GB PCIe-based SSD</li>
+          <li>Radeon Pro 555 with 2GB GDDR5 memory + Intel HD Graphics 630</li>
+          <li>Touch Bar and Touch ID</li>
+          <li>5 Year Safeware $485 warranty</li>
         </ul>
 
       </div>
-      <div id="preset5" class="presets">
+      <div id="preset4" class="presets">
         <div class="radio text-center">
           <label><input type="radio" name="optradio" id="Apple-Macbook-Air"></label>
         </div>
-        <img class="center preset-imgs" src="https://cdn4.iconfinder.com/data/icons/MacBook_Pro/512/leopard.png" />
-        <div class="preset-title">Apple Macbook Air Laptop</div>
+        <img class="center preset-imgs" src="media/macbook-template.png" />
+        <div class="preset-title">Apple Macbook Air 13" Laptop ($1,655.00)</div>
 
         <!----Description of device.--->
         <ul id="preset-list">
-          <li>Intel Core i7-7700 (QC/8MB/8T/3.6GHz/65W)</li>
-          <li></li>
-          <li>8GB (2x8GB) DDR4 Memory</li>
-          <li>2.5 inch 512GB SATA Class 20 Solid State Drive</li>
-          <li>Intel Integrated Graphics, Dell OptiPlex</li>
+          <li>2.2GHz Intel Dual-Core Core i7, Turbo Boost up to 3.2GH</li>
+          <li>8GB 1600MHz LPDDR3 Memory </li>
+          <li>512GB PCIe-based SSD</li>
+          <li>Intel HD Graphics 600</lisff
+
           <li>DVD+/-RW Bezel</li>
+          <li>5 Year Safeware $350 warranty</li>
         </ul>
       </div>
     </div>
@@ -384,7 +348,7 @@ TO DO:
         </div>
 
         <!---Customize these images later--->
-        <img class="center preset-imgs" src="http://www.budgetpc.com.au/media/catalog/product/cache/1/thumbnail/258x245/9df78eab33525d08d6e5fb8d27136e95/r/f/rfb-dell-t1700_0.png" />
+        <img class="center preset-imgs" src="media/Lenovo-M910S-SFF.jpg" />
         <div class="preset-title">PCS Lenovo M910S SFF Desktop </div>
 
         <!----Description of device.--->
@@ -402,7 +366,7 @@ TO DO:
         <div class="radio text-center">
           <label><input type="radio" name="optradio" id="PCS-Lenovo-M910T-MT-Desktop"></label>
         </div>
-        <img class="center preset-imgs" src="http://www.budgetpc.com.au/media/catalog/product/cache/1/thumbnail/258x245/9df78eab33525d08d6e5fb8d27136e95/r/f/rfb-dell-t1700_0.png" />
+        <img class="center preset-imgs" src="media/Lenovo-M910T-MT.jpg" />
         <div class="preset-title">PCS Lenovo M910T MT Desktop  </div>
 
         <!----Description of device.--->
@@ -423,7 +387,7 @@ TO DO:
           <label><input type="radio" name="optradio" id="PCS-Lenovo-M910Z-AIO-Desktop"></label>
         </div>
 
-        <img class="center preset-imgs" src="http://www.budgetpc.com.au/media/catalog/product/cache/1/thumbnail/258x245/9df78eab33525d08d6e5fb8d27136e95/r/f/rfb-dell-t1700_0.png" />
+        <img class="center preset-imgs" src="media/lenovo-AIO.jpg" />
         <div class="preset-title">PCS Lenovo M910Z AIO Desktop </div>
 
         <!----Description of device.--->
@@ -444,7 +408,7 @@ TO DO:
           <label><input type="radio" name="optradio" id="PCS-Lenovo-T570-Standard-Laptop"></label>
         </div>
 
-        <img class="center preset-imgs" src="https://images-eu.ssl-images-amazon.com/images/I/41D7S53e%2BPL._SL500_AC_SS350_.jpg" />
+        <img class="center preset-imgs" src="media/PCS-Lenovo-T570-Standard-Laptop.jpg" />
         <div class="preset-title">PCS Lenovo T570 Standard Laptop</div>
 
         <!----Description of device.--->
@@ -465,7 +429,7 @@ TO DO:
           <label><input type="radio" name="optradio" id="PCS-Lenov-T470S-Advanced-Laptop"></label>
         </div>
 
-        <img class="center preset-imgs" src="https://images-eu.ssl-images-amazon.com/images/I/41D7S53e%2BPL._SL500_AC_SS350_.jpg" />
+        <img class="center preset-imgs" src="media/PCS-Lenovo-T570-Standard-Laptop.jpg" />
         <div class="preset-title">PCS Lenovo T470S Advanced Laptop</div>
 
         <!---Description of device.--->
@@ -498,17 +462,16 @@ TO DO:
         </div>
 
         <!---Customize these images later--->
-        <img class="center preset-imgs" src="https://i.ebayimg.com/thumbs/images/g/IkwAAOSwfVpYonFO/s-l225.jpg" />
+        <img class="center preset-imgs" src="media/ipad-air.jpg" />
         <div class="preset-title">iPad Air</div>
 
         <!---Description of device.--->
         <ul id="preset-list">
-          <li>Intel Core i7-7700 (QC/8MB/8T/3.6GHz/65W)</li>
-          <li></li>
-          <li>Win 10 Pro 64 English, French, Spanish</li>
-          <li>16GB (2x8GB) DDR4 Memory</li>
-          <li>2.5 inch 512GB SATA SSD</li>
-          <li>Intel Integrated Graphics, Dell OptiPlex</li>
+          <li>A7 processor chip with 64-bit architecture</li>
+          <li>9.7-inch (diagonal) LED-backlit; 2048x1536-pixel resolution at 264 ppi; </li>
+          <li>1GB RAM</li>
+          <li>16GB or 32GB storage.</li>
+
 
         </ul>
       </div>
@@ -517,18 +480,15 @@ TO DO:
         <div class="radio text-center">
           <label><input type="radio" name="optradio" id="Tablet-2"></label>
         </div>
-        <img class="center preset-imgs" src="https://i.ebayimg.com/thumbs/images/g/IkwAAOSwfVpYonFO/s-l225.jpg" />
+        <img class="center preset-imgs" src="media/surface.jpg" />
         <div class="preset-title">Microsoft Surface 3</div>
 
         <!----Description of device.--->
         <ul id="preset-list">
-          <li>Intel Core i3-7700 (QC/8MB/8T/3.6GHz/65W)</li>
-          <li></li>
-          <li>Win 10 Pro 64 English, French, Spanish</li>
-          <li>16GB (2x8GB) DDR4 Memory</li>
-          <li>2.5 inch 512GB SATA Class 20 Solid State Drive</li>
-          <li>Intel Integrated Graphics, Dell OptiPlex</li>
-
+          <li>Intel Core i3 Processor</li>
+          <li>12-Inch HD (2160 x 1440) Touchscreen Display</li>
+          <li>Win 8.1 Pro 64 English, French, Spanish</li>
+          <li>4 GB RAM; 64 GB Storage Capacity</li>
         </ul>
 
       </div>
@@ -538,24 +498,19 @@ TO DO:
           <label><input type="radio" name="optradio" id="Tablet-3"></label>
         </div>
 
-        <img class="center preset-imgs" src="https://i.ebayimg.com/thumbs/images/g/IkwAAOSwfVpYonFO/s-l225.jpg" />
+        <img class="center preset-imgs" src="media/surface.jpg" />
         <div class="preset-title">Microsoft Surface 4</div>
 
         <!----Description of device.--->
         <ul id="preset-list">
-          <li>Intel Core i7-7700 (QC/8MB/8T/3.6GHz/65W)</li>
-          <li></li>
-          <li>Win 10 Pro 64 English, French, Spanish</li>
-          <li>16GB (2x8GB) DDR4 Memory</li>
-          <li>2.5 inch 512GB SATA Class 20 Solid State Drive</li>
-          <li>Intel Integrated Graphics, Dell OptiPlex</li>
+          <li>Intel core i5 Processor</li>
+          <li>12.3” PixelSense Touchscreen with pen input 2736 x 1824 resolution</li>
+          <li>Win 8.1 Pro 64 English, French, Spanish</li>
+          <li>4 GB RAM; 64 GB Storage Capacity</li>
 
         </ul>
 
       </div>
-
-
-
       </div>
 
     </div>
@@ -569,25 +524,23 @@ TO DO:
 
 
   <hr>
-  <!--- Customizations and Software ---->
+  <!--- Customizations and Software
+  These should have been in containers also holding their respecting options below.
+  Fix later.---->
   <div id="custimizations-title-flex">
     <h2 id="customizations-title"><u>Preset Customizations</u></h2>
     <h2 id="customizations-title"><u>Additional Software</u></h2>
   </div>
 
+<!-- Holds preset, software, and comment containers --->
   <div id="custom-and-textarea-container">
     <form id="computer-form-flex-container">
-      <!---Preset Titles----->
-      <div id="device-spec-titles">
-        <label class="computer-labels">Processor</label>
-        <label id="spec-titles-os" class="computer-labels">Operating System</label>
-        <label class="computer-labels">RAM</label>
-        <label class="computer-labels">Storage</label>
-        <label class="computer-labels">CD / DVD Drive</label>
-      </div>
+
+      <!-- Computer custimization options-->
       <div class="container-computer-info">
         <!---CPU--------------------------->
-        <div class="dropdown">
+        <div class="dropdown" id="dropdown-flex-container">
+            <label class="computer-labels">Processor</label>
           <button class="btn btn-secondary dropdown-toggle" type="button" id="cpu-drop-bar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     No change <i class="fa fa-chevron-down"></i>
   </button>
@@ -599,7 +552,8 @@ TO DO:
         </div>
 
         <!--OS------------------------->
-        <div class="dropdown">
+        <div class="dropdown" id="dropdown-flex-container">
+          <label id="spec-titles-os" class="computer-labels">Operating System</label>
           <button class="btn btn-secondary dropdown-toggle" type="button" id="os-drop-bar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     No change <i class="fa fa-chevron-down"></i>
   </button>
@@ -611,7 +565,8 @@ TO DO:
         </div>
 
         <!---RAM------------------------>
-        <div class="dropdown">
+        <div class="dropdown" id="dropdown-flex-container">
+          <label class="computer-labels">RAM</label>
           <button class="btn btn-secondary dropdown-toggle" type="button" id="ram-drop-bar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     No change <i class="fa fa-chevron-down"></i>
   </button>
@@ -623,7 +578,8 @@ TO DO:
         </div>
 
         <!---STORAGE------------------------>
-        <div class="dropdown">
+        <div class="dropdown" id="dropdown-flex-container">
+              <label class="computer-labels">Storage</label>
           <button class="btn btn-secondary dropdown-toggle" type="button" id="storage-drop-bar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     No change <i class="fa fa-chevron-down"></i>
   </button>
@@ -637,17 +593,6 @@ TO DO:
           </div>
         </div>
 
-        <!---Optical Drive------------------------>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="drive-drop-bar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    No change <i class="fa fa-chevron-down"></i>
-  </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <div class="dropdown-item drive-drop">Yes</div>
-            <div class="dropdown-item drive-drop">No</div>
-
-          </div>
-        </div>
       </div>
     </form>
 
@@ -655,15 +600,12 @@ TO DO:
 <!--Software selection container----->
     <form id="software-flex-container">
       <!---Software choices------->
-      <div id="device-software-titles">
-        <label class="computer-labels">Adobe CC</label>
-        <label class="computer-labels">Stata</label>
-        <label class="computer-labels">VM Software</label>
-        <label class="computer-labels">SPSS Amos</label>
-        <label class="computer-labels">Other</label>
-      </div>
+
+        <!-- -->
       <div class="container-software-info">
-        <div class="dropdown">
+        <div class="dropdown" id="dropdown-flex-container">
+          <label class="computer-labels">Adobe CC</label>
+
           <button class="btn btn-secondary dropdown-toggle" type="button" id="adobeCC-drop-bar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     No change <i class="fa fa-chevron-down"></i>
   </button>
@@ -674,7 +616,9 @@ TO DO:
           </div>
         </div>
 
-        <div class="dropdown">
+          <!-- -->
+        <div class="dropdown" id="dropdown-flex-container">
+          <label class="computer-labels">Stata</label>
           <button class="btn btn-secondary dropdown-toggle" type="button" id="stata-drop-bar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     No change <i class="fa fa-chevron-down"></i>
   </button>
@@ -686,35 +630,25 @@ TO DO:
           </div>
         </div>
 
-        <div class="dropdown">
+          <!-- -->
+      <div class="dropdown" id="dropdown-flex-container">
+        <label class="computer-labels">VM Software</label>
           <button class="btn btn-secondary dropdown-toggle" type="button" id="vm-drop-bar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     No change <i class="fa fa-chevron-down"></i>
   </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <div class="dropdown-item vm-drop">Parallels</div>
             <div class="dropdown-item vm-drop">VMWare</div>
-            <div class="dropdown-item vm-drop">VirtualBox (Free!)</div>
+            <div class="dropdown-item vm-drop">VirtualBox (Free)</div>
 
           </div>
         </div>
-
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="amos-drop-bar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    No change <i class="fa fa-chevron-down"></i>
-  </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <div class="dropdown-item amos-drop">Yes</div>
-            <div class="dropdown-item amos-drop">No</div>
-
-          </div>
-        </div>
-
-
-        <div class="form-group">
+        <!-- -->
+        <div class="form-group" id="dropdown-flex-container">
+            <label class="computer-labels">Other</label>
           <input type="text" class="form-control" id="misc-field" placeholder="Enter Software Here">
         </div>
         <!--Correct later. Change name convention from drop to field for better understanding--->
-
       </div>
     </form>
 
@@ -724,10 +658,9 @@ TO DO:
       <textarea class="form-control" id="textarea-comments" rows="7" placeholder="Enter comments here(Questions, extra changes not seen on form, etc...)"></textarea>
     </form>
 
-  </div>
+    </div>
 
-  </form>
-
+    </form>
   </div>
 
 
@@ -739,33 +672,18 @@ TO DO:
 </body>
 
 <div id="footer-flex-container">
-<footer>
-  <p>
-    Lorem ipsum dolor sit amet, duo at dictas delicata. Te noster feugiat rationibus sea, rebum fugit eos no, integre numquam in pri. Vero delenit nonumes ut mel, te autem augue pri. Duo eu ponderum iracundia definitiones, nam nostrum intellegebat in. Veritus
-    delectus laboramus ius ex.
-  </p>
+  <footer>
+    <p>
+      Lorem ipsum dolor sit amet, duo at dictas delicata. Te noster feugiat rationibus sea, rebum fugit eos no, integre numquam in pri. Vero delenit nonumes ut mel, te autem augue pri. Duo eu ponderum iracundia definitiones, nam nostrum intellegebat in. Veritus
+      delectus laboramus ius ex.
+    </p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 
 
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  <script src="script.js"></script>
-
-
-</footer>
-</div>
-
-
-
+  </footer>
+  </div>
 <html>
-
-<!-- CHECKBOXES
-
- <div class="checkbox">
-          <label><input type="checkbox" name="remember"> Remember me</label>
-        </div>
-
---->

@@ -1,13 +1,13 @@
 /*=====================NAV BAR=======================================*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
-#navmenu {
+#brandmenu {
   display: flex;
   justify-content: center;
   background: #FF8200;
   width: auto;
 
 }
-#navmenu ul {
+#brandmenu ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@
 
 }
 
-#navmenu ul:after {
+#brandmenu ul:after {
   content: " ";
   display: block;
   font-size: 0;
@@ -24,18 +24,18 @@
   clear: both;
   visibility: hidden;
 }
-#navmenu ul li {
+#brandmenu ul li {
   display: inline-block;
   padding: 0;
   margin: 0;
 }
-#navmenu.align-right ul li {
+#brandmenu.align-right ul li {
   float: right;
 }
-#navmenu.align-center ul {
+#brandmenu.align-center ul {
   text-align: center;
 }
-#navmenu ul li a {
+#brandmenu ul li a {
   color: #ffffff;
   text-decoration: none;
   display: block;
@@ -51,13 +51,13 @@
   -o-transition: color .25s;
   transition: color .25s;
 }
-#navmenu ul li a:hover {
+#brandmenu ul li a:hover {
   color: #333333;
 }
-#navmenu ul li a:hover:before {
+#brandmenu ul li a:hover:before {
   width: 100%;
 }
-#navmenu ul li a:after {
+#brandmenu ul li a:after {
   content: "";
   display: block;
   position: absolute;
@@ -68,7 +68,7 @@
   background: #ffffff;
   opacity: .5;
 }
-#navmenu ul li a:before {
+#brandmenu ul li a:before {
   content: "";
   display: block;
   position: absolute;
@@ -83,14 +83,14 @@
   -o-transition: width .25s;
   transition: width .25s;
 }
-#navmenu ul li.last > a:after,
-#navmenu ul li:last-child > a:after {
+#brandmenu ul li.last > a:after,
+#brandmenu ul li:last-child > a:after {
   display: none;
 }
-#navmenu ul li.active a {
+#brandmenu ul li.active a {
   color: #333333;
 }
-#navmenu ul li.active a:before {
+#brandmenu ul li.active a:before {
   width: 100%;
 }
 
@@ -168,10 +168,7 @@ padding-top: 30px;
   height: 450px;
 }
 
-/*dropdown item width*/
-.dropdown-item {
-  width: 10vw;
-}
+
 
 .dept-drop {
   text-align: center;
@@ -196,21 +193,9 @@ padding-top: 30px;
 
 .preset-imgs {
   text-align:center;
-
+   min-height: 90px;
   width: 40%;
 }
-
-.radio {
-
-}
-
-
-/* Maybe add a hover color? Make it stick once selected with JS?
-#preset1:hover, #preset2:hover, #preset3:hover, #preset4:hover, #preset5:hover {
-  background: #d0efd0;
-}*/
-
-
 
 
 #customizations-title {
@@ -231,16 +216,15 @@ those custimization dropdowns. Is there a better way?*/
 
 #custom-and-textarea-container {
 
-		height: 230px;
+	height: 230px;
   display: flex;
 }
 
 #textarea-container {
-    border-left: 3px lightgrey solid;
+  border-left: 3px lightgrey solid;
   width: 70%;
-
   padding-left: 20px;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 
@@ -270,7 +254,8 @@ those custimization dropdowns. Is there a better way?*/
   border-right: 3px lightgrey solid;
   padding-top: 0px;
   display: flex;
-  justify-content: space-between;
+  align-content: stretch;
+
   width: 30%;
 }
 
@@ -281,26 +266,39 @@ those custimization dropdowns. Is there a better way?*/
   width: 30%;
 }
 
+/*Tie these into one class?*/
+.container-computer-info {
+  width: 100%;
+}
+.container-software-info {
+    width: 100%;
+}
+/*This is a poor way to line up labels with the drop down menu.
+I was having issues with flexbox*/
+.computer-labels {
+padding-left: 10px;
 
-#device-spec-titles {
-  padding-left: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
-#device-software-titles {
-  padding-left: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+
+#misc-field {
+  width: 40%;
 }
+
+/*Important overides drop down styles taking over
+when clicked*/
+#dropdown-flex-container {
+    display: flex !important;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+
 
 
 /*Center text/buttons*/
 .dropdown {
-  float: center;
-  width: 200px;
-  text-align: center;
   padding: 5px;
 }
 
@@ -319,11 +317,15 @@ those custimization dropdowns. Is there a better way?*/
   min-width: 170px;
 }
 
+/*dropdown item width*/
+.dropdown-item {
+  width: 9vw;
+}
 
 
 
 
-/* equivalent to using plain divs*/
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -357,12 +359,7 @@ footer p {
 
 /*My solution for correcting a positioning issue when
 hiding/unhiding this element for Apple page toggle.*/
-#os-drop-bar{
-  margin: auto;
-  display: flex;
-  justify-content: center;
 
-}
 
 #apple-form-flex-container,#lenovo-form-flex-container,#tablets-form-flex-container {
   display: none;
@@ -371,25 +368,25 @@ hiding/unhiding this element for Apple page toggle.*/
 
 /*-----------------Phones-------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  #navmenu ul li {
+  #brandmenu ul li {
     float: none;
     display: block;
   }
-  #navmenu ul li a {
+  #brandmenu ul li a {
     width: 100%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-bottom: 1px solid #fb998c;
   }
-  #navmenu ul li.last > a,
-  #navmenu ul li:last-child > a {
+  #brandmenu ul li.last > a,
+  #brandmenu ul li:last-child > a {
     border: 0;
   }
-  #navmenu ul li a:after {
+  #brandmenu ul li a:after {
     display: none;
   }
-  #navmenu ul li a:before {
+  #brandmenu ul li a:before {
     display: none;
   }
 }
